@@ -17,6 +17,7 @@ public class ExceptionBasic {
 		
 			// catch block will catch the exception
 		}catch(ArithmeticException e){
+			e = new ArithmeticException();
 			System.out.println("in catch bolck");
 			//finally will always execute
 		}finally {
