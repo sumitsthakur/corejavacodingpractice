@@ -18,7 +18,7 @@ class Parent3 {
 }
 
 class Child3 extends Parent3 {
-	// child class method can not have checked excpetion if parent class is not throwing any exception
+	//compile time exception, child class method can not have checked excpetion if parent class is not throwing any exception
 	void callParent() throws IOException{
 		System.out.println("child class method 3");
 	}

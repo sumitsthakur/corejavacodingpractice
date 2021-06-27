@@ -18,6 +18,7 @@ class Parent3_3 {
 }
 
 class Child3_3 extends Parent3_3 {
+	//compile time exception at below line
 	void callParent() throws IOException {
 		System.out.println("child class method 3_3");
 	}

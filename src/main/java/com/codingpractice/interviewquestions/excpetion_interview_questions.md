@@ -2,16 +2,16 @@
 
 ## Theory :
 
-Q.
+**Q. **
 
 
-Q.
+**Q. **
 
 
-Q.
+**Q. **
 
 
-Q.
+**Q. **
 
 
 
@@ -31,4 +31,5 @@ No. exception object in multi catch block is final.
 We can't assign it because when exception object is catched in multi catch block, 
 complier is not sure which excpetion is going to be catched. 
 
-
+## References
+https://javahungry.blogspot.com/2019/09/programs-on-exception-handling-in-java.html

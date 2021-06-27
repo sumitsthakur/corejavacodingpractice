@@ -20,7 +20,7 @@ public class ExceptionMultiCatchBlockRule1_2 {
 			int array[] = new int[10];
 			array[10] = 30 / 0;
 			FileReader file = new FileReader("somefile.txt");
-		} catch (FileNotFoundException | IOException e) {
+		} catch (FileNotFoundException | IOException e) { // compile time exception
 			System.out.println(e.getMessage());
 		}
 

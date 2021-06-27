@@ -21,7 +21,7 @@ public class ExceptionMultiCatchBlockRule1_3 {
 			int array[] = new int[10];
 			array[10] = 30 / 0;
 		} catch (ArithmeticException | ArrayIndexOutOfBoundsException e) {
-			e = NumberFormatException(); // not allowed as compiler is not sure which exception is catching
+			e = NumberFormatException(); // compile time exception, not allowed as compiler is not sure which exception is catching
 			System.out.println(e.getMessage());
 		}
 
