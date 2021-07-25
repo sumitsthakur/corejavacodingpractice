@@ -9,13 +9,15 @@ public class ExceptionPractice2 {
 	public static int exceptionTest() {
 		int i = 6;
 		try {
+			i=i/0;
 			return i;
 		} catch (Exception e) {
 			i = 10;
 			return i;
 		} finally {
-			i++;
-			System.out.println("In finally block");
+			i=i+1;
+			System.out.println("In finally block"+i);
+			return i; //not good practice to return from finally block
 		}
 	}
 }
