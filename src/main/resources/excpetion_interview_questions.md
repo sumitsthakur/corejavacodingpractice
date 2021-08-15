@@ -5,7 +5,7 @@
 **Q. What Is an Exception?**  
 An exception is an abnormal event that occurs during the execution of a program and disrupts the normal flow of the program's instructions.
 
-**Q.What Is the Purpose of the Throw and Throws Keywords? **  
+**Q.What Is the Purpose of the Throw and Throws Keywords?**   
 The throws keyword is used to specify that a method may raise an exception during its execution. It enforces explicit exception handling when calling a method:
 Eg. public void simpleMethod() throws Exception 
 
@@ -25,12 +25,12 @@ finally: The finally block is optional and can be used only with a try-catch blo
 **Q. What Is the Difference Between a Checked and an Unchecked Exception?**    
 Checked Exceptions should be handled in the code using try-catch block or else the method should use the throws keyword to let the caller know about the checked exceptions that might be thrown from the method. Unchecked Exceptions are not required to be handled in the program or to mention them in the throws clause of the method.
 Exception is the superclass of all checked exceptions whereas RuntimeException is the superclass of all unchecked exceptions. Note that RuntimeException is the child class of Exception.
-Checked exceptions are error scenarios that require to be handled in the code, or else you will get compile time error. For example, if you use FileReader to read a file, it throws FileNotFoundException and we must catch it in the try-catch block or throw it again to the caller method. Unchecked exceptions are mostly caused by poor programming, for example, NullPointerException when invoking a method on an object reference without making sure that itís not null. For example, I can write a method to remove all the vowels from the string. Itís the callerís responsibility to make sure not to pass a null string. I might change the method to handle these scenarios but ideally, the caller should take care of this.
+Checked exceptions are error scenarios that require to be handled in the code, or else you will get compile time error. For example, if you use FileReader to read a file, it throws FileNotFoundException and we must catch it in the try-catch block or throw it again to the caller method. Unchecked exceptions are mostly caused by poor programming, for example, NullPointerException when invoking a method on an object reference without making sure that it‚Äôs not null. For example, I can write a method to remove all the vowels from the string. It‚Äôs the caller‚Äôs responsibility to make sure not to pass a null string. I might change the method to handle these scenarios but ideally, the caller should take care of this.
 
 **Q. Explain Java Exception Hierarchy?**   
-Java Exceptions are hierarchical and inheritance is used to categorize different types of exceptions. Throwable is the parent class of Java Exceptions Hierarchy and it has two child objects ñ Error and Exception. Exceptions are further divided into checked exceptions and runtime exceptions.
+Java Exceptions are hierarchical and inheritance is used to categorize different types of exceptions. Throwable is the parent class of Java Exceptions Hierarchy and it has two child objects ‚Äì Error and Exception. Exceptions are further divided into checked exceptions and runtime exceptions.
 
-Errors are exceptional scenarios that are out of the scope of application and itís not possible to anticipate and recover from them, for example, hardware failure, JVM crash, or out-of-memory error.
+Errors are exceptional scenarios that are out of the scope of application and it‚Äôs not possible to anticipate and recover from them, for example, hardware failure, JVM crash, or out-of-memory error.
 
 Checked Exceptions are exceptional scenarios that we can anticipate in a program and try to recover from it, for example, FileNotFoundException. We should catch this exception and provide a useful message to the user and log it properly for debugging purposes. Exception is the parent class of all Checked Exceptions.
 
@@ -41,8 +41,8 @@ Runtime Exceptions are caused by bad programming, for example, trying to retriev
 An exception is an event that represents a condition from which is possible to recover, whereas error represents an external situation usually impossible to recover from.
 
 All errors thrown by the JVM are instances of Error or one of its subclasses, the more common ones include but are not limited to:
-Eg. OutOfMemoryError ñ thrown when the JVM cannot allocate more objects because it is out memory, and the garbage collector was unable to make more available
-StackOverflowError ñ occurs when the stack space for a thread has run out, typically because an application recurses too deeply
+Eg. OutOfMemoryError ‚Äì thrown when the JVM cannot allocate more objects because it is out memory, and the garbage collector was unable to make more available
+StackOverflowError ‚Äì occurs when the stack space for a thread has run out, typically because an application recurses too deeply
 
 **Q.  What Is a Stacktrace and How Does It Relate to an Exception?**   
 A stack trace provides the names of the classes and methods that were called, from the start of the application to the point an exception occurred.
@@ -50,20 +50,20 @@ A stack trace provides the names of the classes and methods that were called, fr
 It's a very useful debugging tool since it enables us to determine exactly where the exception was thrown in the application and the original causes that led to it.
 
 **Q. What is OutOfMemoryError in Java?**   
-OutOfMemoryError in Java is a subclass of java.lang.VirtualMachineError and itís thrown by JVM when it ran out of heap memory. We can fix this error by providing more memory to run the java application through java options.
+OutOfMemoryError in Java is a subclass of java.lang.VirtualMachineError and it‚Äôs thrown by JVM when it ran out of heap memory. We can fix this error by providing more memory to run the java application through java options.
 
 $>java MyProgram -Xms1024m -Xmx1024m -XX:PermSize=64M -XX:MaxPermSize=256m
 
-**Q. What are different scenarios causing ìException in thread mainî?**   
+**Q. What are different scenarios causing ‚ÄúException in thread main‚Äù?**   
 Some of the common main thread exception scenarios are:
 
 Exception in thread main java.lang.UnsupportedClassVersionError: This exception comes when your java class is compiled from another JDK version and you are trying to run it from another java version.
 
 Exception in thread main java.lang.NoClassDefFoundError: There are two variants of this exception. The first one is where you provide the class full name with .class extension. The second scenario is when Class is not found.
 
-Exception in thread main java.lang.NoSuchMethodError: main: This exception comes when you are trying to run a class that doesnít have the main method.
+Exception in thread main java.lang.NoSuchMethodError: main: This exception comes when you are trying to run a class that doesn‚Äôt have the main method.
 
-Exception in thread ìmainî java.lang.ArithmeticException: Whenever an exception is thrown from the main method, it prints the exception in the console. The first part explains that an exception is thrown from the main method, the second part prints the exception class name and then after a colon, it prints the exception message.
+Exception in thread ‚Äúmain‚Äù java.lang.ArithmeticException: Whenever an exception is thrown from the main method, it prints the exception in the console. The first part explains that an exception is thrown from the main method, the second part prints the exception class name and then after a colon, it prints the exception message.
 
 ## Scenarios :
 
@@ -82,7 +82,7 @@ We can't assign it because when exception object is catched in multi catch block
 complier is not sure which excpetion is going to be catched.  
 
 **Q.  Can You Throw Any Exception Inside a Lambda Expression's Body?**
-When using a standard functional interface already provided by Java, you can only throw unchecked exceptions because standard functional interfaces do not have a ìthrowsî clause in method signatures:
+When using a standard functional interface already provided by Java, you can only throw unchecked exceptions because standard functional interfaces do not have a ‚Äúthrows‚Äù clause in method signatures:
 
 However, if you are using a custom functional interface, throwing checked exceptions is possible:
 ```java
