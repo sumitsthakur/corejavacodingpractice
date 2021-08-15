@@ -3,9 +3,9 @@ package com.codingpractice.exceptionhandling.multicatchblockrules;
 
 /**
  * Rule 1 : While using multi catch block
- * Declare as many excpetions you want but 
- * If base class exception is declared you can't declare child class excpetion
- * excpetion object is final
+ * Declare as many exceptions you want but 
+ * If base class exception is declared you can't declare child class exception
+ * exception object is final
  * 
  * @author sumitsthakur
  *

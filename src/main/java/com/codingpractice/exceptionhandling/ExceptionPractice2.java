@@ -13,6 +13,7 @@ public class ExceptionPractice2 {
 			return i;
 		} catch (Exception e) {
 			i = 10;
+			System.out.println("in catch block"+i);
 			return i;
 		} finally {
 			i=i+1;
